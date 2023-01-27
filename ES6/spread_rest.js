@@ -84,12 +84,12 @@ let vaccineNames = ["flu", "covid", "chickenpox", "diptheria", "hepatitis A & B"
 console.log(...vaccineNames)
 
 //create doctor object and print his qualifications and other details using spread
-let Staff = {name: "John Doe", age: 65, location: "CA"}
-let Education = {degree: "M.D. Dental", graduation: 1969, schoolname: "UCSF"}
-let Doctor = {...Staff, ...Education}
-console.log(Doctor)
+// let Staff = {name: "John Doe", age: 65, location: "CA"}
+// let Education = {degree: "M.D. Dental", graduation: 1969, schoolname: "UCSF"}
+// let Doctor = {...Staff, ...Education}
+// console.log(Doctor)
 
-let Doctor2 = {
+let Doctor = {
     name: 'John Doe',
     age: 35,
     qualifications: ['MBBS', 'MD', 'DNB'],
@@ -98,7 +98,7 @@ let Doctor2 = {
     location: 'New York'
 }
 
-console.log({...Doctor2})
+console.log({...Doctor})
 
 //create a vaccine object with details like - name, no of doses required, price etc and merge it with nearest doctor object using spread
 let vaccine1 = {
@@ -114,10 +114,10 @@ console.log(vaccineObj)
 function generateArray(start, end) {
     return Array.from({length: end - start + 1}, (_,i) => start + i)
 }
-console.log(generateArray(100, 150))
+// console.log(generateArray(102, 105))
 
 //then use this array to pass as spread operator into a function named largesum
 //in largesum we should accept the array in rest parameter (...arrayOfNums), and then add the numbers
-let arrayOfNums = generateArray(100, 150)
+let arrayOfNums = generateArray(100, 105)
 console.log(arrayOfNums)
 console.log(LargeSum(...arrayOfNums))
