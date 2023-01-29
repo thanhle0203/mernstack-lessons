@@ -49,3 +49,42 @@ console.log(myVaccine.getScheduleArwFunc())
 
 
 //Question : create a class to calculate area of anything - rectangle, circle, one object of your choice
+ class Shape {
+    // this is the constructor for Shape
+    constructor(width, height, radius){
+        this.width = width
+        this.height = height
+        this.radius = radius
+    }
+
+    getShapeDetails = function () {
+        return {
+            Width: this.width,
+            Height: this.height,
+            Radius: this.radius
+        }
+    }
+
+
+    // compute and return volume
+    getRectangleAreaArw = () => `Area of Rectangle: ${this.width * this.height}`
+    getRectangleArea () {
+        return {
+            Area: this.width*this.height
+        }
+    }
+
+    getCircleAreaArw = () => `Area of Circle: ${3.15*this.radius*this.radius}`
+    getCircleArea () {
+        return {
+            Area: 3.14*this.radius*this.radius
+        }
+    }
+ }
+
+ let shape = new Shape(2, 10, 5)
+ console.log(shape.getShapeDetails())
+ console.log(shape.getRectangleAreaArw())
+ console.log(shape.getRectangleArea())
+ console.log(shape.getCircleAreaArw())
+ console.log(shape.getCircleArea())
